@@ -1,0 +1,373 @@
+:root {
+    --clr-primary-400: hsl(227, 85%, 77%);
+    --clr-accent-400: hsl(260, 67%, 74%);
+    --clr-neutral-400: hsl(0, 0%, 54%);
+    --clr-neutral-300: hsl(0, 0%, 54%, 0.75);
+    --clr-neutral-200: hsl(0, 0%, 54%, 0.5);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-off-white: hsl(0, 0%, 98%);
+    --clr-active: hsl(130, 85%, 70%);
+
+    --ff-primary: "Montserrat", sans-serif;
+
+    --ff-body: var(--ff-primary);
+    --ff-heading: var(--ff-primary);
+
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-semi-bold: 600;
+    --fw-bold: 700;
+    --fw-black: 900;
+
+    --fs-300: 0.75rem;
+    --fs-400: 1rem;
+    --fs-500: 1.25rem;
+    --fs-700: 3rem;
+    --fs-900: 6rem;
+
+    --size-100: 0.25rem;
+    --size-200: 0.5rem;
+    --size-300: 0.75rem;
+    --size-400: 1rem;
+    --size-500: 1.25rem;
+    --size-600: 1.5rem;
+    --size-700: 2rem;
+    --size-800: 2.5rem;
+    --size-900: 3rem;
+
+    --fs-primary-body: var(--fs-400);
+    --fs-secondary-body: var(--fs-300);
+    --fs-primary-heading: var(--fs-900);
+    --fs-secondary-heading: var(--fs-700);
+    --fs-primary-nav: var(--fs-400);
+    --fs-secondary-nav: var(--fs-300);
+    --fs-primary-intro: var(--fs-500);
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* general styling */
+
+body {
+    font-size: var(--fs-body);
+    font-family: var(--ff-body);
+    color: var(--clr-neutral-400);
+    font-weight: var(--fw-regular);
+}
+
+.container {
+    --max-width: 85rem;
+    --padding: 2.5rem;
+
+    width: min(var(--max-width), 100% - (var(--padding) * 2));
+    margin-inline: auto;
+}
+
+.container-edges {
+    width: 98%;
+    margin-inline: auto;
+}
+
+.text-centered {
+    text-align: center;
+}
+
+.even-columns {
+    display: grid;
+}
+
+@media (min-width: 50em) {
+    .even-columns {
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+    }
+}
+
+/* navigation */
+
+.primary-header {
+    padding-top: var(--size-400);
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mobile-nav-toggle {
+    display: none;
+}
+
+.nav-list {
+    font-weight: var(--fw-semi-bold);
+    font-size: var(--fs-primary-nav);
+    display: flex;
+    gap: var(--size-800);
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: var(--clr-neutral-300);
+}
+
+@media (max-width: 50em) {
+    .primary-navigation {
+        display: none;
+        position: fixed;
+        padding: var(--size-700);
+        inset: 7rem var(--size-400) auto;
+        max-width: 25rem;
+        margin-inline: auto;
+        background: var(--clr-white);
+        border-radius: var(--size-200);
+        box-shadow: 0 0 0.75em rgb(0, 0, 0, 0.05);
+    }
+
+    .primary-navigation[data-visible] {
+        display: block;
+    }
+
+    .primary-header[data-overlay]::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background-image: linear-gradient(rgb(0 0 0 / 0), rgb(0 0 0 / 0.8));
+    }
+
+    .nav-list {
+        display: grid;
+        gap: var(--size-400);
+        text-align: center;
+    }
+
+    .nav-list a {
+        color: var(--clr-primary-400);
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        position: fixed;
+        top: var(--size-400);
+        right: var(--size-400);
+        cursor: pointer;
+        background: transparent;
+        border: 0;
+        padding: 0.5em;
+    }
+
+    .mobile-nav-toggle .icon-close {
+        display: none;
+    }
+
+    .icon-hamburger {
+        height: 2rem;
+        width: 2rem;
+    }
+}
+
+/* Utility classes */
+
+.visually-hidden {
+    position: absolute;
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+.text-primary-400 {
+    color: var(--clr-primary-400);
+}
+
+.text-accent-400 {
+    color: var(--clr-accent-400);
+}
+
+.text-neutral-400 {
+    color: var(--clr-neutral-400);
+}
+
+.text-neutral-300 {
+    color: var(--clr-neutral-300);
+}
+
+.text-neutral-200 {
+    color: var(--clr-neutral-200);
+}
+
+.text-status-seeking {
+    display: none;
+}
+@media (min-width: 50em) {
+    .text-status-seeking {
+        display: block;
+        color: var(--clr-active);
+    }
+}
+
+.bg-white {
+    background-color: var(--clr-white);
+}
+.bg-off-white {
+    background-color: var(--clr-off-white);
+}
+
+.fw-regular {
+    font-weight: var(--fw-regular);
+}
+
+.fw-medium {
+    font-weight: var(--fw-medium);
+}
+
+.fw-semi-bold {
+    font-weight: var(--fw-semi-bold);
+}
+
+.fw-bold {
+    font-weight: var(--fw-bold);
+}
+
+.fw-black {
+    font-weight: var(--fw-black);
+}
+
+.fs-primary-body {
+    font-size: var(--fs-primary-body);
+}
+
+.fs-secondary-body {
+    font-size: var(--fs-secondary-body);
+}
+
+.fs-primary-heading {
+    font-size: var(--fs-primary-heading);
+}
+
+.fs-secondary-heading {
+    font-size: var(--fs-secondary-heading);
+}
+
+.fs-primary-nav {
+    font-size: var(--fs-primary-nav);
+}
+
+.fs-secondary-nav {
+    font-size: var(--fs-secondary-nav);
+}
+
+.fs-primary-intro {
+    font-size: var(--fs-primary-intro);
+}
+
+.fs-300 {
+    font-size: var(--fs-300);
+}
+
+.fs-400 {
+    font-size: var(--fs-400);
+}
+
+.fs-500 {
+    font-size: var(--fs-500);
+}
+
+.fs-600 {
+    font-size: var(--fs-600);
+}
+
+.fs-700 {
+    font-size: var(--fs-700);
+}
+
+.fs-900 {
+    font-size: var(--fs-900);
+}
+
+.flex-200 {
+    display: flex;
+    gap: var(--size-200);
+}
+
+.flex-400 {
+    display: flex;
+    gap: var(--size-400);
+}
