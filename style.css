@@ -7,7 +7,8 @@
     --clr-neutral-200: hsl(0, 0%, 54%, 0.5);
     --clr-white: hsl(0, 0%, 100%);
     --clr-off-white: hsl(0, 0%, 98%);
-    --clr-active: hsl(130, 85%, 70%);
+    --clr-active: hsl(130, 85%, 45%);
+    --clr-active-opaque: hsl(130, 85%, 99%);
 
     --ff-primary: "Montserrat", sans-serif;
 
@@ -642,10 +643,22 @@ div.intro-content .socials-list {
     display: none;
 }
 
+@keyframes pulse {
+    0%,
+    100% {
+        color: var(--clr-active);
+    }
+    50% {
+        color: var(--clr-active-opaque);
+    }
+}
+
 @media (min-width: 70em) {
     .text-status-seeking {
         display: block;
         color: var(--clr-active);
+        animation: pulse 4s infinite;
+        animation-delay: 2s;
     }
 }
 
