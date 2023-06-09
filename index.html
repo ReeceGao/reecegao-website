@@ -15,61 +15,57 @@
     </head>
     <body>
         <header class="primary-header">
-            <div class="container-edges">
-                <div class="nav-wrapper">
-                    <a href="#">
-                        <img src="images/logo.png" alt="site logo" />
-                    </a>
-                    <div
-                        class="text-status-seeking fw-semi-bold fs-secondary-nav"
-                    >
-                        • actively seeking new dev roles!
-                    </div>
-                    <button
-                        class="mobile-nav-toggle"
-                        aria-controls="primary-navigation"
-                        aria-expanded="false"
-                    >
-                        <img
-                            class="icon-close"
-                            src="images/close.svg"
-                            alt=""
-                            aria-hidden="true"
-                        />
-                        <img
-                            class="icon-hamburger"
-                            src="images/hamburger-menu.svg"
-                            alt=""
-                            aria-hidden="true"
-                        />
-                        <span class="visually-hidden">Menu</span>
-                    </button>
-                    <nav class="primary-navigation" id="primary-navigation">
-                        <ul role="list" class="nav-list">
-                            <li><a href="#">about</a></li>
-                            <li><a href="#">work</a></li>
-                            <li><a href="#">projects</a></li>
-                            <li><a href="#">contact</a></li>
-                        </ul>
-                    </nav>
+            <div class="nav-wrapper">
+                <a href="#">
+                    <img src="images/logo.png" alt="site logo" />
+                </a>
+                <div class="text-status-seeking fw-semi-bold fs-secondary-nav">
+                    • actively seeking new dev roles!
                 </div>
+                <button
+                    class="mobile-nav-toggle"
+                    aria-controls="primary-navigation"
+                    aria-expanded="false"
+                >
+                    <img
+                        class="icon-close"
+                        src="images/close.svg"
+                        alt=""
+                        aria-hidden="true"
+                    />
+                    <img
+                        class="icon-hamburger"
+                        src="images/hamburger-menu.svg"
+                        alt=""
+                        aria-hidden="true"
+                    />
+                    <span class="visually-hidden">Menu</span>
+                </button>
+                <nav class="primary-navigation" id="primary-navigation">
+                    <ul role="list" class="nav-list">
+                        <li><a href="#">about</a></li>
+                        <li><a href="#">work</a></li>
+                        <li><a href="#">projects</a></li>
+                        <li><a href="#">contact</a></li>
+                    </ul>
+                </nav>
             </div>
         </header>
 
         <main>
             <section class="bg-white">
-                <div class="container">
+                <div class="container intro">
                     <div class="even-columns">
-                        <div>
-                            <p class="text-neutral-300 fw-medium">
+                        <div class="intro-content">
+                            <p class="text-neutral-300 fw-medium hi-text">
                                 hi, my name is
                             </p>
                             <h1
-                                class="fw-bold fs-primary-heading text-primary-400"
+                                class="fw-bold fs-primary-heading text-primary-400 name"
                             >
                                 reece gao.
                             </h1>
-                            <p class="text-neutral-300 fw-semi-bold">
+                            <p class="text-neutral-300 fw-semi-bold purpose">
                                 I'm a software engineer focusing on full-stack
                                 development. Always looking for exciting
                                 opportunities to learn and mentor.
@@ -77,34 +73,35 @@
                             <ul
                                 aria-label="social links"
                                 role="list"
-                                class="socials-list flex-400"
+                                class="socials-list"
                             >
                                 <li>
-                                    <a aria-label="github"
-                                        ><img src="images/github.svg"
-                                    /></a>
+                                    <a aria-label="github">
+                                        <img src="images/github.svg" />
+                                    </a>
                                 </li>
                                 <li>
-                                    <a aria-label="linkedin"
-                                        ><img src="images/linkedin.svg"
-                                    /></a>
+                                    <a aria-label="linkedin">
+                                        <img src="images/linkedin.svg" />
+                                    </a>
                                 </li>
                                 <li>
-                                    <a aria-label="instagram"
-                                        ><img src="images/instagram.svg"
-                                    /></a>
+                                    <a aria-label="instagram">
+                                        <img src="images/instagram.svg" />
+                                    </a>
                                 </li>
                                 <li>
-                                    <a aria-label="facebook"
-                                        ><img src="images/facebook.svg"
-                                    /></a>
+                                    <a aria-label="facebook">
+                                        <img src="images/facebook.svg" />
+                                    </a>
                                 </li>
                             </ul>
                         </div>
-                        <div>
+                        <div class="intro-picture">
                             <img
                                 src="images/propic.png"
                                 alt="profile picture"
+                                class="picture"
                             />
                         </div>
                     </div>
@@ -120,11 +117,11 @@
                         </h2>
                     </div>
 
-                    <div class="even-columns">
-                        <div>
-                            <img src="images/aboutmepic.png" />
+                    <div class="even-columns bio-content">
+                        <div class="bio-picture">
+                            <img class="picture" src="images/aboutmepic.png" />
                         </div>
-                        <div>
+                        <div class="bio-text">
                             <p>
                                 Hello! My name is Reece, and I'm a developer who
                                 loves to find the fun and beauty in every aspect
@@ -133,10 +130,11 @@
                                 in Computer Science, and I'm passionate about
                                 working in highly collaborative environments
                                 where I have the opportunity to learn,
-                                contribute, and mentor others. When I'm not
-                                working, you can probably find me gaming with my
-                                friends, staying active at the gym, eating way
-                                too much food, or bugging my dog Lupe.
+                                contribute, and mentor others.<br /><br />
+                                When I'm not working, you can probably find me
+                                gaming with my friends, staying active at the
+                                gym, eating way too much food, or bugging my dog
+                                Lupe.
                             </p>
                         </div>
                     </div>
@@ -144,20 +142,28 @@
             </section>
             <section class="bg-white">
                 <div class="container">
-                    <div class="even-columns">
-                        <div>
+                    <div class="even-columns experience">
+                        <div class="experience-text">
                             <h2
                                 class="fw-black fs-secondary-heading text-primary-400"
                             >
                                 experience
                             </h2>
                         </div>
-                        <div>
-                            <ul role="list" class="experience-items">
-                                <li>
-                                    <h3 class="fw-semi-bold">
+                        <div class="resume">
+                            <ul
+                                role="list"
+                                class="list-items fs-secondary-body"
+                            >
+                                <li
+                                    class="salesforce-fulltime fs-secondary-body"
+                                >
+                                    <h3 class="fw-semi-bold text-primary-400">
                                         Software Engineer • Salesforce
                                     </h3>
+                                    <span class="mobile-date work-date">
+                                        Aug 2021 - Jan 2023 <br />
+                                    </span>
                                     <p>
                                         Improved and maintained a feature-rich
                                         notification service used by internal
@@ -166,12 +172,21 @@
                                         via multiple delivery channels (desktop,
                                         mobile, Slack).
                                     </p>
-                                    <ul role="list" class="skills-list"></ul>
+                                    <div class="skills-list">
+                                        <span>Java</span>
+                                        <span>JavaScript</span>
+                                        <span>HTML</span>
+                                        <span>CSS</span>
+                                        <span>LWC</span>
+                                    </div>
                                 </li>
-                                <li>
-                                    <h3 class="fw-semi-bold">
+                                <li class="salesforce-intern">
+                                    <h3 class="fw-semi-bold text-primary-400">
                                         Software Engineer Intern • Salesforce
                                     </h3>
+                                    <span class="mobile-date work-date">
+                                        May 2020 - Aug 2020 <br />
+                                    </span>
                                     <p>
                                         Authored VSCode extension to provide
                                         teams with a playground environment for
@@ -179,12 +194,20 @@
                                         view live changes to UI components
                                         without having to leave VSCode.
                                     </p>
-                                    <ul role="list" class="skills-list"></ul>
+                                    <div class="skills-list">
+                                        <span>TypeScript</span>
+                                        <span>HTML</span>
+                                        <span>CSS</span>
+                                        <span>LWC</span>
+                                    </div>
                                 </li>
-                                <li>
-                                    <h3 class="fw-semi-bold">
+                                <li class="teaching-assistant">
+                                    <h3 class="fw-semi-bold text-primary-400">
                                         Teaching Assistant • Georgia Tech
                                     </h3>
+                                    <span class="mobile-date work-date">
+                                        Jan 2019 - Aug 2021 <br />
+                                    </span>
                                     <p>
                                         Teaching Assistant for Georgia Tech's
                                         Data Structures and Algorithms course.
@@ -192,12 +215,17 @@
                                         homework, hosted office hours, and
                                         answered questions online on Piazza.
                                     </p>
-                                    <ul role="list" class="skills-list"></ul>
+                                    <div class="skills-list">
+                                        <span>Java</span>
+                                    </div>
                                 </li>
-                                <li>
-                                    <h3 class="fw-semi-bold">
+                                <li class="sabre-intern">
+                                    <h3 class="fw-semi-bold text-primary-400">
                                         Software Engineer Intern • Sabre
                                     </h3>
+                                    <span class="mobile-date work-date">
+                                        May 2019 - Aug 2019 <br />
+                                    </span>
                                     <p>
                                         Coordinated with multiple teams across
                                         the world to push improvements to Sabre
@@ -205,11 +233,19 @@
                                         by multiple airline companies to track
                                         and monitor inventory on flights.
                                     </p>
-                                    <ul role="list" class="skills-list"></ul>
+                                    <div class="skills-list">
+                                        <span>React</span>
+                                        <span>JavaScript</span>
+                                        <span>HTML</span>
+                                        <span>CSS</span>
+                                    </div>
                                 </li>
                             </ul>
-                            <a href="#">
-                                <span>View Full Resume</span>
+                            <a href="#" class="view">
+                                <span
+                                    class="fw-medium text-white-400 fs-secondary-body"
+                                    >View Full Resume</span
+                                >
                                 <img src="images/arrow.svg" alt="arrow" />
                             </a>
                         </div>
@@ -219,24 +255,86 @@
             <section class="bg-off-white">
                 <div class="container">
                     <div class="even-columns">
-                        <div>
+                        <div class="projects-text">
                             <h2
                                 class="fw-black fs-secondary-heading text-accent-400"
                             >
                                 projects
                             </h2>
                         </div>
-                        <div>
-                            <ul role="list" class="projects-items">
+                        <div class="projects">
+                            <ul
+                                role="list"
+                                class="list-items fs-secondary-body"
+                            >
                                 <li>
-                                    <h3 class="fw-semi-bold">
-                                        reecegao.com (v1)
-                                    </h3>
-                                    <p>
-                                        Portfolio website built from scratch
-                                        using ViteJs and hosted on Netlify.
-                                    </p>
-                                    <ul role="list" class="skills-list"></ul>
+                                    <div class="project-item-container">
+                                        <img
+                                            src="images/project-thumb.png"
+                                            alt=""
+                                        />
+                                        <div class="project-item-info">
+                                            <h3
+                                                class="fw-semi-bold text-accent-400"
+                                            >
+                                                reecegao.com (v1)
+                                            </h3>
+                                            <span class="work-date"
+                                                >June 2023
+                                            </span>
+                                            <p>
+                                                Portfolio website built from
+                                                scratch using ViteJs. Designed
+                                                in Figma and hosted on Netlify.
+                                            </p>
+                                            <ul
+                                                role="list"
+                                                class="skills-list"
+                                                data-type="accent"
+                                            >
+                                                <span>ViteJS</span>
+                                                <span>JavaScript</span>
+                                                <span>HTML</span>
+                                                <span>CSS</span>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="project-item-container">
+                                        <img
+                                            src="images/chipotle-thumbnail.png"
+                                            alt=""
+                                        />
+                                        <div class="project-item-info">
+                                            <h3
+                                                class="fw-semi-bold text-accent-400"
+                                            >
+                                                Chipotle Rewards Optimizer
+                                            </h3>
+                                            <span class="work-date"
+                                                >July 2023</span
+                                            >
+                                            <p>
+                                                Web app that allows users to
+                                                find out the most optimal way to
+                                                use their Chipotle Rewards
+                                                points at local Chipotle
+                                                resturants
+                                            </p>
+                                            <ul
+                                                role="list"
+                                                class="skills-list"
+                                                data-type="accent"
+                                            >
+                                                <span>Node</span>
+                                                <span>React</span>
+                                                <span>JavaScript</span>
+                                                <span>HTML</span>
+                                                <span>CSS</span>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
@@ -244,77 +342,84 @@
                 </div>
             </section>
             <section class="bg-white">
-                <div class="container">
-                    <div class="text-centered">
-                        <h2
-                            class="fw-black fs-secondary-heading text-primary-400"
-                        >
-                            get in touch
-                        </h2>
-                    </div>
+                <div class="container contact">
+                    <h2
+                        class="fw-black fs-secondary-heading text-primary-400 text-centered"
+                    >
+                        get in touch
+                    </h2>
                     <p>
                         I would love to get in contact, please don't hesitate to
-                        reach out! Actively looking for full-stack developer
-                        positions and would interested in similar roles. Open to
-                        all work status roles including in-person, hybrid, and
-                        fully remote. Currently based out of Bellevue,
-                        Washington but would be open to relocation if there is a
-                        good fit.
+                        reach out!
+                        <span class="text-primary-400 fw-bold">
+                            Actively looking for full-stack developer positions
+                            and would interested in similar roles. Open to all
+                            work statuses including in-person, hybrid, and fully
+                            remote.</span
+                        >
+                        <br /><br />
+                        Currently based out of
+                        <span class="text-primary-400 fw-bold"
+                            >Bellevue, Washington</span
+                        >
+                        but would be open to relocation if there is a good fit.
                     </p>
                     <button>contact me</button>
                 </div>
             </section>
         </main>
         <footer>
-            <div class="container-edges">
-                <div class="even-columns">
-                    <div>
+            <div class="container-footer-header">
+                <div class="footer-container">
+                    <div class="footer-contacts">
                         <a class="flex-200">
                             <img src="images/email.svg" alt="email icon" />
-                            <span>rgao1998@gmail.com</span>
+                            <span class="text-neutral-200"
+                                >rgao1998@gmail.com</span
+                            >
                         </a>
                         <a class="flex-200">
                             <img
                                 src="images/telegram.svg"
                                 alt="telegram icon"
                             />
-                            <span>t.me/reecegao</span>
+                            <span class="text-neutral-200">t.me/reecegao</span>
                         </a>
                     </div>
                     <div>
                         <p
-                            class="fw-semi-bold fs-secondary-body text-neutral-200"
+                            class="fw-semi-bold fs-secondary-body text-neutral-200 footer-message"
                         >
                             Designed and built by Reece Gao. Created using
                             vanilla ViteJs. Initial concept planned on Figma.
                             Deployed using Netlify.
                         </p>
                     </div>
-                    <div>
+                    <div class="footer-socials">
                         <ul
                             aria-label="social links in Footer"
                             role="list"
-                            class="socials-list flex-400"
+                            class="socials-list flex-200"
                         >
                             <li>
-                                <a aria-label="github"
-                                    ><img src="images/github.svg"
-                                /></a>
+                                <a aria-label="github">
+                                    <img src="images/github.svg" />
+                                </a>
                             </li>
                             <li>
-                                <a aria-label="linkedin"
-                                    ><img src="images/linkedin.svg"
-                                /></a>
+                                <a aria-label="linkedin">
+                                    <img src="images/linkedin.svg" />
+                                </a>
                             </li>
                             <li>
-                                <a aria-label="instagram"
-                                    ><img src="images/instagram.svg"
-                                /></a>
+                                <a aria-label="instagram">
+                                    <img src="images/instagram.svg" />
+                                </a>
                             </li>
                             <li>
-                                <a aria-label="facebook"
-                                    ><img src="images/facebook.svg"
-                                /></a>
+                                <a aria-label="facebook">
+                                    <img src="images/facebook.svg" />
+                                </a>
                             </li>
                         </ul>
                     </div>
