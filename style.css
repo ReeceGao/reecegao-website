@@ -124,6 +124,7 @@ select {
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 3rem;
 }
 
 body {
@@ -320,21 +321,15 @@ div.intro-content .socials-list {
 }
 
 .container.intro {
-    padding-block: 6rem 10rem;
-}
-
-@media (width < 32em) {
-    .container.intro {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: 100dvh;
-    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100dvh;
 }
 
 @media (min-width: 70em) {
-    .container.intro {
-        padding-block: 16rem 24rem;
+    .container.intro .even-columns {
+        padding-bottom: 10rem;
     }
 
     .intro-content {
