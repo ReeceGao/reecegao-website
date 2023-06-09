@@ -136,9 +136,18 @@ label {
     float: left;
 }
 
+.socials-list svg,
 .socials-list img {
     width: 1.7rem;
     height: 1.75rem;
+}
+
+.socials-list svg:hover path {
+    fill: var(--clr-primary-400);
+}
+
+.socials-list svg:hover .facebook-hack {
+    fill: var(--clr-white);
 }
 
 /* download resume button */

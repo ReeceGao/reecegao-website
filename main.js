@@ -19,10 +19,11 @@ navToggle.addEventListener("click", () => {
 
 document.addEventListener("click", (e) => {
     if (
-        e.target.className === "primary-header" &&
+        (e.target.className === "primary-header" ||
+            e.target?.className === "left-arrow") &&
         primaryNav.hasAttribute("data-visible")
     ) {
-        close();
+        closeNav();
     }
     if (
         downloadResume.hasAttribute("data-show-download") &&
