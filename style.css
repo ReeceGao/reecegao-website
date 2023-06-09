@@ -492,6 +492,11 @@ div.intro-content .socials-list {
     display: none;
 }
 
+.project-item-info a {
+    text-decoration: none;
+    color: var(--clr-accent-400);
+}
+
 @media (min-width: 70em) {
     .project-item-container {
         flex-direction: row;
@@ -507,11 +512,6 @@ div.intro-content .socials-list {
     .projects-text {
         text-align: left;
         padding-top: 1.5rem;
-    }
-
-    .project-item-info a {
-        text-decoration: none;
-        color: var(--clr-accent-400);
     }
 }
 
