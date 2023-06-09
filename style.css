@@ -155,7 +155,7 @@ label {
 
 .download-resume {
     right: -17rem;
-    top: 10rem;
+    top: 5rem;
     position: fixed;
     background-color: var(--clr-primary-400);
     border-radius: 1.2rem;
@@ -193,12 +193,18 @@ label {
     display: none;
 }
 
+@media (min-width: 70em) {
+    .download-resume {
+        top: 10rem;
+    }
+}
+
 /* navigation */
 
 .primary-header {
     position: fixed;
     padding-block: var(--size-400);
-    padding-inline: var(--size-700);
+    padding-inline: var(--size-500);
     width: 100%;
     margin-inline: auto;
     background-color: var(--clr-white);
@@ -319,7 +325,10 @@ div.intro-content .socials-list {
 
 @media (width < 32em) {
     .container.intro {
-        padding-block: 3rem 5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100dvh;
     }
 }
 
@@ -464,9 +473,6 @@ div.intro-content .socials-list {
     .view span {
         margin-left: 1rem;
     }
-
-    .resume ul li {
-    }
 }
 
 /* projects page styling */
@@ -588,6 +594,10 @@ div.intro-content .socials-list {
 
     .footer-contacts a {
         text-decoration: none;
+    }
+
+    .footer-message {
+        margin-right: 3rem;
     }
 
     .footer-socials {
