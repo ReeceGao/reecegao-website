@@ -28,13 +28,13 @@
                     aria-expanded="false"
                 >
                     <img
-                        class="icon-close"
+                        class="icon-close icon-size"
                         src="images/close.svg"
                         alt=""
                         aria-hidden="true"
                     />
                     <img
-                        class="icon-hamburger"
+                        class="icon-hamburger icon-size"
                         src="images/hamburger-menu.svg"
                         alt=""
                         aria-hidden="true"
@@ -43,16 +43,36 @@
                 </button>
                 <nav class="primary-navigation" id="primary-navigation">
                     <ul role="list" class="nav-list">
-                        <li><a href="#">about</a></li>
-                        <li><a href="#">work</a></li>
-                        <li><a href="#">projects</a></li>
-                        <li><a href="#">contact</a></li>
+                        <li><a href="#">home</a></li>
+                        <li><a href="#about">about</a></li>
+                        <li><a href="#work">work</a></li>
+                        <li><a href="#projects">projects</a></li>
+                        <li><a href="#contact">contact</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
 
         <main>
+            <div class="download-resume">
+                <a class="arrow-container">
+                    <img
+                        src="images/right-arrow.svg"
+                        alt=""
+                        class="right-arrow"
+                    />
+                    <img
+                        src="images/left-arrow.svg"
+                        alt=""
+                        class="left-arrow"
+                    />
+                </a>
+                <a href="resume.pdf" target="_blank">
+                    <span class="text-white-400 fs-primary-body fw-semi-bold">
+                        download my resume
+                    </span>
+                </a>
+            </div>
             <section class="bg-white">
                 <div class="container intro">
                     <div class="even-columns">
@@ -76,22 +96,38 @@
                                 class="socials-list"
                             >
                                 <li>
-                                    <a aria-label="github">
+                                    <a
+                                        aria-label="github"
+                                        href="https://github.com/ReeceGao"
+                                        target="_blank"
+                                    >
                                         <img src="images/github.svg" />
                                     </a>
                                 </li>
                                 <li>
-                                    <a aria-label="linkedin">
+                                    <a
+                                        aria-label="linkedin"
+                                        href="https://www.linkedin.com/in/reece-gao/"
+                                        target="_blank"
+                                    >
                                         <img src="images/linkedin.svg" />
                                     </a>
                                 </li>
                                 <li>
-                                    <a aria-label="instagram">
+                                    <a
+                                        aria-label="instagram"
+                                        href="https://www.instagram.com/pieceoreece/"
+                                        target="_blank"
+                                    >
                                         <img src="images/instagram.svg" />
                                     </a>
                                 </li>
                                 <li>
-                                    <a aria-label="facebook">
+                                    <a
+                                        aria-label="facebook"
+                                        href="https://www.facebook.com/reece.gao/"
+                                        target="_blank"
+                                    >
                                         <img src="images/facebook.svg" />
                                     </a>
                                 </li>
@@ -107,7 +143,7 @@
                     </div>
                 </div>
             </section>
-            <section class="bg-off-white">
+            <section class="bg-off-white" id="about">
                 <div class="container">
                     <div class="text-centered">
                         <h2
@@ -140,7 +176,7 @@
                     </div>
                 </div>
             </section>
-            <section class="bg-white">
+            <section class="bg-white" id="work">
                 <div class="container">
                     <div class="even-columns experience">
                         <div class="experience-text">
@@ -161,7 +197,7 @@
                                     <h3 class="fw-semi-bold text-primary-400">
                                         Software Engineer • Salesforce
                                     </h3>
-                                    <span class="mobile-date work-date">
+                                    <span class="mobile-date text-neutral-250">
                                         Aug 2021 - Jan 2023 <br />
                                     </span>
                                     <p>
@@ -184,7 +220,7 @@
                                     <h3 class="fw-semi-bold text-primary-400">
                                         Software Engineer Intern • Salesforce
                                     </h3>
-                                    <span class="mobile-date work-date">
+                                    <span class="mobile-date text-neutral-250">
                                         May 2020 - Aug 2020 <br />
                                     </span>
                                     <p>
@@ -205,7 +241,7 @@
                                     <h3 class="fw-semi-bold text-primary-400">
                                         Teaching Assistant • Georgia Tech
                                     </h3>
-                                    <span class="mobile-date work-date">
+                                    <span class="mobile-date text-neutral-250">
                                         Jan 2019 - Aug 2021 <br />
                                     </span>
                                     <p>
@@ -223,7 +259,7 @@
                                     <h3 class="fw-semi-bold text-primary-400">
                                         Software Engineer Intern • Sabre
                                     </h3>
-                                    <span class="mobile-date work-date">
+                                    <span class="mobile-date text-neutral-250">
                                         May 2019 - Aug 2019 <br />
                                     </span>
                                     <p>
@@ -241,7 +277,7 @@
                                     </div>
                                 </li>
                             </ul>
-                            <a href="#" class="view">
+                            <a href="resume.pdf" target="_blank" class="view">
                                 <span
                                     class="fw-medium text-white-400 fs-secondary-body"
                                     >View Full Resume</span
@@ -252,7 +288,7 @@
                     </div>
                 </div>
             </section>
-            <section class="bg-off-white">
+            <section class="bg-off-white" id="projects">
                 <div class="container">
                     <div class="even-columns">
                         <div class="projects-text">
@@ -277,11 +313,13 @@
                                             <h3
                                                 class="fw-semi-bold text-accent-400"
                                             >
-                                                reecegao.com (v1)
+                                                <a href="#">
+                                                    reecegao.dev (v1)
+                                                </a>
                                             </h3>
-                                            <span class="work-date"
-                                                >June 2023
-                                            </span>
+                                            <p class="text-neutral-250">
+                                                June 2023
+                                            </p>
                                             <p>
                                                 Portfolio website built from
                                                 scratch using ViteJs. Designed
@@ -310,9 +348,10 @@
                                             <h3
                                                 class="fw-semi-bold text-accent-400"
                                             >
-                                                Chipotle Rewards Optimizer
+                                                Chipotle Rewards Optimizer - (in
+                                                progress)
                                             </h3>
-                                            <span class="work-date"
+                                            <span class="text-neutral-250"
                                                 >July 2023</span
                                             >
                                             <p>
@@ -341,7 +380,7 @@
                     </div>
                 </div>
             </section>
-            <section class="bg-white">
+            <section class="bg-white" id="contact">
                 <div class="container contact">
                     <h2
                         class="fw-black fs-secondary-heading text-primary-400 text-centered"
@@ -364,65 +403,95 @@
                         >
                         but would be open to relocation if there is a good fit.
                     </p>
-                    <button>contact me</button>
+                    <a href="mailto:rgao1998@gmail.com?subject=Reaching Out"
+                        >contact me</a
+                    >
                 </div>
             </section>
         </main>
         <footer>
-            <div class="container-footer-header">
-                <div class="footer-container">
-                    <div class="footer-contacts">
-                        <a class="flex-200">
-                            <img src="images/email.svg" alt="email icon" />
-                            <span class="text-neutral-200"
-                                >rgao1998@gmail.com</span
+            <div class="footer-container">
+                <div class="footer-contacts">
+                    <a
+                        class="flex-200"
+                        href="mailto:rgao1998@gmail.com?subject=Reaching Out"
+                    >
+                        <img src="images/email.svg" alt="email icon" />
+                        <span class="text-neutral-200">rgao1998@gmail.com</span>
+                    </a>
+                    <a
+                        class="flex-200"
+                        href="http://t.me/reecegao"
+                        target="_blank"
+                    >
+                        <img src="images/telegram.svg" alt="telegram icon" />
+                        <span class="text-neutral-200">t.me/reecegao</span>
+                    </a>
+                </div>
+                <div>
+                    <p
+                        class="fw-semi-bold fs-secondary-body text-neutral-200 footer-message"
+                    >
+                        Designed and built by Reece Gao. Created using vanilla
+                        <a href="https://vitejs.dev/" target="_blank">
+                            ViteJs.
+                        </a>
+                        Initial concept planned on
+                        <a
+                            href="https://www.figma.com/file/pAmt9TqwV05F870KMd8TRX/Reece's-Website?type=design&node-id=0-1&t=UGJJoTcW83q5kh4B-0"
+                            target="_blank"
+                        >
+                            Figma.
+                        </a>
+                        Deployed using
+                        <a href="https://www.netlify.com/" target="_blank">
+                            Netlify.
+                        </a>
+                    </p>
+                </div>
+                <div class="footer-socials">
+                    <ul
+                        aria-label="social links in Footer"
+                        role="list"
+                        class="socials-list flex-200"
+                    >
+                        <li>
+                            <a
+                                aria-label="github"
+                                href="https://github.com/ReeceGao"
+                                target="_blank"
                             >
-                        </a>
-                        <a class="flex-200">
-                            <img
-                                src="images/telegram.svg"
-                                alt="telegram icon"
-                            />
-                            <span class="text-neutral-200">t.me/reecegao</span>
-                        </a>
-                    </div>
-                    <div>
-                        <p
-                            class="fw-semi-bold fs-secondary-body text-neutral-200 footer-message"
-                        >
-                            Designed and built by Reece Gao. Created using
-                            vanilla ViteJs. Initial concept planned on Figma.
-                            Deployed using Netlify.
-                        </p>
-                    </div>
-                    <div class="footer-socials">
-                        <ul
-                            aria-label="social links in Footer"
-                            role="list"
-                            class="socials-list flex-200"
-                        >
-                            <li>
-                                <a aria-label="github">
-                                    <img src="images/github.svg" />
-                                </a>
-                            </li>
-                            <li>
-                                <a aria-label="linkedin">
-                                    <img src="images/linkedin.svg" />
-                                </a>
-                            </li>
-                            <li>
-                                <a aria-label="instagram">
-                                    <img src="images/instagram.svg" />
-                                </a>
-                            </li>
-                            <li>
-                                <a aria-label="facebook">
-                                    <img src="images/facebook.svg" />
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+                                <img src="images/github.svg" />
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                aria-label="linkedin"
+                                href="https://www.linkedin.com/in/reece-gao/"
+                                target="_blank"
+                            >
+                                <img src="images/linkedin.svg" />
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                aria-label="instagram"
+                                href="https://www.instagram.com/pieceoreece/"
+                                target="_blank"
+                            >
+                                <img src="images/instagram.svg" />
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                aria-label="facebook"
+                                href="https://www.facebook.com/reece.gao/"
+                                target="_blank"
+                            >
+                                <img src="images/facebook.svg" />
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </footer>

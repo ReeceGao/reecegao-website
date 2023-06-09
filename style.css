@@ -3,6 +3,7 @@
     --clr-accent-400: hsl(260, 67%, 74%);
     --clr-neutral-400: hsl(0, 0%, 54%);
     --clr-neutral-300: hsl(0, 0%, 54%, 0.75);
+    --clr-neutral-250: hsl(0, 0%, 54%, 0.6);
     --clr-neutral-200: hsl(0, 0%, 54%, 0.5);
     --clr-white: hsl(0, 0%, 100%);
     --clr-off-white: hsl(0, 0%, 98%);
@@ -120,6 +121,10 @@ select {
 
 /* general styling */
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-size: var(--fs-body);
     font-family: var(--ff-body);
@@ -132,19 +137,64 @@ label {
 }
 
 .socials-list img {
-    width: 1.75rem;
+    width: 1.7rem;
     height: 1.75rem;
+}
+
+/* download resume button */
+
+.download-resume {
+    right: -17rem;
+    top: 10rem;
+    position: fixed;
+    background-color: var(--clr-primary-400);
+    border-radius: 1.2rem;
+    display: flex;
+    align-items: center;
+    padding-block: 1rem;
+    padding-inline: 0.35rem 5rem;
+    transition: all 0.75s ease;
+}
+
+.download-resume[data-show-download] {
+    right: -3.5rem;
+}
+
+.download-resume img {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 1rem;
+    padding-left: 0.1rem;
+}
+
+.download-resume a {
+    text-decoration: none;
+}
+.download-resume a:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--clr-white);
+}
+
+.arrow-container {
+    cursor: pointer;
+}
+
+.right-arrow {
+    display: none;
 }
 
 /* navigation */
 
 .primary-header {
-    padding-top: var(--size-400);
+    position: fixed;
+    padding-block: var(--size-400);
+    padding-inline: var(--size-700);
+    width: 100%;
+    margin-inline: auto;
+    background-color: var(--clr-white);
 }
 
 .nav-wrapper {
-    width: 98%;
-    margin-inline: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -215,7 +265,7 @@ label {
         display: none;
     }
 
-    .icon-hamburger {
+    .icon-size {
         height: 2rem;
         width: 2rem;
     }
@@ -366,11 +416,6 @@ div.intro-content .socials-list {
     background-color: var(--clr-accent-400);
 }
 
-.work-date {
-    opacity: 60%;
-    margin-bottom: 0.25rem;
-}
-
 @media (min-width: 70em) {
     .experience-text {
         padding-top: 1.5rem;
@@ -408,6 +453,9 @@ div.intro-content .socials-list {
     }
     .view span {
         margin-left: 1rem;
+    }
+
+    .resume ul li {
     }
 }
 
@@ -450,6 +498,11 @@ div.intro-content .socials-list {
         text-align: left;
         padding-top: 1.5rem;
     }
+
+    .project-item-info a {
+        text-decoration: none;
+        color: var(--clr-accent-400);
+    }
 }
 
 /* get in touch page styling */
@@ -470,10 +523,11 @@ div.intro-content .socials-list {
     padding-block: 3rem;
 }
 
-.contact button {
+.contact a {
+    text-decoration: none;
     margin-block: 2rem 3rem;
     border-radius: 100vmax;
-    padding: 1rem;
+    padding: 1.35rem;
     background-color: var(--clr-primary-400);
     color: var(--clr-white);
     outline: auto;
@@ -490,7 +544,18 @@ div.intro-content .socials-list {
     max-width: 20rem;
 }
 
+.footer-message a:visited,
+.footer-message a {
+    text-decoration: none;
+    color: var(--clr-neutral-200);
+}
+
+.footer-message a:hover {
+    color: var(--clr-primary-400);
+}
+
 .footer-container {
+    padding-inline: 1rem;
     display: grid;
     justify-items: center;
     text-align: center;
@@ -509,6 +574,10 @@ div.intro-content .socials-list {
     .footer-contacts {
         margin-top: 0.5rem;
         display: block;
+    }
+
+    .footer-contacts a {
+        text-decoration: none;
     }
 
     .footer-socials {
@@ -546,6 +615,10 @@ div.intro-content .socials-list {
 
 .text-neutral-300 {
     color: var(--clr-neutral-300);
+}
+
+.text-neutral-250 {
+    color: var(--clr-neutral-250);
 }
 
 .text-neutral-200 {

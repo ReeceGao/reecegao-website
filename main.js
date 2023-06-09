@@ -1,11 +1,69 @@
 const primaryHeader = document.querySelector(".primary-header");
 const navToggle = document.querySelector(".mobile-nav-toggle");
+const closeIcon = document.querySelector(".icon-close");
+const hamburgerIcon = document.querySelector(".icon-hamburger");
 const primaryNav = document.querySelector(".primary-navigation");
 
+const downloadResume = document.querySelector(".download-resume");
+const arrowContainer = document.querySelector(".arrow-container");
+const leftArrow = document.querySelector(".left-arrow");
+const rightArrow = document.querySelector(".right-arrow");
+
 navToggle.addEventListener("click", () => {
-    primaryNav.hasAttribute("data-visible")
-        ? primaryNav.setAttribute("aria-expanded", false)
-        : primaryNav.setAttribute("aria-expanded", true);
+    if (primaryNav.hasAttribute("data-visible")) {
+        closeNav();
+    } else {
+        openNav();
+    }
+});
+
+document.addEventListener("click", (e) => {
+    if (
+        e.target.className === "primary-header" &&
+        primaryNav.hasAttribute("data-visible")
+    ) {
+        close();
+    }
+    if (
+        downloadResume.hasAttribute("data-show-download") &&
+        e.target?.className !== "left-arrow"
+    ) {
+        closeDownloadResume();
+    }
+});
+
+const closeNav = () => {
+    primaryNav.setAttribute("aria-expanded", false);
+    hamburgerIcon.style.display = "block";
+    closeIcon.style.display = "none";
     primaryNav.toggleAttribute("data-visible");
     primaryHeader.toggleAttribute("data-overlay");
+};
+
+const openNav = () => {
+    primaryNav.setAttribute("aria-expanded", true);
+    hamburgerIcon.style.display = "none";
+    closeIcon.style.display = "block";
+    primaryNav.toggleAttribute("data-visible");
+    primaryHeader.toggleAttribute("data-overlay");
+};
+
+arrowContainer.addEventListener("click", () => {
+    if (downloadResume.hasAttribute("data-show-download")) {
+        closeDownloadResume();
+    } else {
+        openDownloadResume();
+    }
 });
+
+const openDownloadResume = () => {
+    leftArrow.style.display = "none";
+    rightArrow.style.display = "block";
+    downloadResume.toggleAttribute("data-show-download");
+};
+
+const closeDownloadResume = () => {
+    leftArrow.style.display = "block";
+    rightArrow.style.display = "none";
+    downloadResume.toggleAttribute("data-show-download");
+};
