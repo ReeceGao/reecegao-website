@@ -22,6 +22,7 @@
     --fw-black: 900;
 
     --fs-300: 0.75rem;
+    --fs-350: 0.875rem;
     --fs-400: 1rem;
     --fs-500: 1.25rem;
     --fs-700: 3rem;
@@ -128,7 +129,7 @@ html {
 }
 
 body {
-    font-size: var(--fs-body);
+    font-size: var(--fs-primary-body);
     font-family: var(--ff-body);
     color: var(--clr-neutral-400);
     font-weight: var(--fw-regular);
@@ -413,6 +414,7 @@ div.intro-content .socials-list {
 }
 
 .skills-list {
+    font-size: var(--fs-300);
     margin-top: 0.5rem;
     display: flex;
     justify-content: center;
@@ -720,6 +722,10 @@ div.intro-content .socials-list {
 
 .fs-primary-intro {
     font-size: var(--fs-primary-intro);
+}
+
+.fs-list-body {
+    font-size: var(--fs-350);
 }
 
 .fs-300 {
