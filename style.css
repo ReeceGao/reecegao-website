@@ -270,7 +270,6 @@ label {
 
     .mobile-nav-toggle {
         display: block;
-        position: fixed;
         top: var(--size-200);
         right: var(--size-400);
         cursor: pointer;
@@ -660,7 +659,7 @@ div.intro-content .socials-list {
     }
 }
 
-@media (min-width: 70em) {
+@media (min-width: 30em) {
     .text-status-seeking {
         display: block;
         color: var(--clr-active);
