@@ -74,11 +74,11 @@ const closeDownloadResume = () => {
 
 lupe.addEventListener("mouseover", () => {
     const randomInt = Math.floor(Math.random() * 10 + 1);
-    lupe.style.cursor = `url(assets/lupe/${randomInt}.png), auto`;
+    lupe.style.cursor = `url(/${randomInt}.png), auto`;
     intervalNum = window.setInterval(() => {
         const randomInt = Math.floor(Math.random() * 10 + 1);
         console.log(randomInt);
-        lupe.style.cursor = `url(assets/lupe/${randomInt}.png), auto`;
+        lupe.style.cursor = `url(/${randomInt}.png), auto`;
     }, 400);
 });
 
