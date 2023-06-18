@@ -77,7 +77,6 @@ lupe.addEventListener("mouseover", () => {
     lupe.style.cursor = `url(/${randomInt}.png), auto`;
     intervalNum = window.setInterval(() => {
         const randomInt = Math.floor(Math.random() * 10 + 1);
-        console.log(randomInt);
         lupe.style.cursor = `url(/${randomInt}.png), auto`;
     }, 400);
 });
