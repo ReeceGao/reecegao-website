@@ -368,6 +368,7 @@ div.intro-content .socials-list {
 
 .doge:hover {
     text-decoration: underline;
+    cursor: none;
 }
 
 @media (min-width: 70em) {
