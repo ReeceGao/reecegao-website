@@ -366,6 +366,10 @@ div.intro-content .socials-list {
     display: none;
 }
 
+.doge:hover {
+    text-decoration: underline;
+}
+
 @media (min-width: 70em) {
     .even-columns.bio-content {
         padding-block: 8rem;

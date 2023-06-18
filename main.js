@@ -9,6 +9,9 @@ const arrowContainer = document.querySelector(".arrow-container");
 const leftArrow = document.querySelector(".left-arrow");
 const rightArrow = document.querySelector(".right-arrow");
 
+const lupe = document.querySelector(".doge");
+let intervalNum;
+
 navToggle.addEventListener("click", () => {
     if (primaryNav.hasAttribute("data-visible")) {
         closeNav();
@@ -68,3 +71,17 @@ const closeDownloadResume = () => {
     rightArrow.style.display = "none";
     downloadResume.toggleAttribute("data-show-download");
 };
+
+lupe.addEventListener("mouseover", () => {
+    const randomInt = Math.floor(Math.random() * 10 + 1);
+    lupe.style.cursor = `url(assets/lupe/${randomInt}.png), auto`;
+    intervalNum = window.setInterval(() => {
+        const randomInt = Math.floor(Math.random() * 10 + 1);
+        console.log(randomInt);
+        lupe.style.cursor = `url(assets/lupe/${randomInt}.png), auto`;
+    }, 400);
+});
+
+lupe.addEventListener("mouseout", () => {
+    window.clearInterval(intervalNum);
+});
