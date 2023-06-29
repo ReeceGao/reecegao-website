@@ -337,7 +337,7 @@ div.intro-content .socials-list {
 
     .intro-picture {
         display: grid;
-        justify-content: center;
+        justify-content: right;
         align-content: center;
     }
 
@@ -774,7 +774,7 @@ div.intro-content .socials-list {
 @media (width > 32em) {
     .container {
         --max-width: 90rem;
-        --padding: 4rem;
+        --padding: 2.5rem;
 
         width: min(var(--max-width), 100% - (var(--padding) * 2));
         margin-inline: auto;
