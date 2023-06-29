@@ -312,8 +312,6 @@ div.intro-content .socials-list {
 
 .intro-picture {
     display: none;
-    justify-content: right;
-    align-content: center;
 }
 
 .intro-content {
@@ -328,10 +326,6 @@ div.intro-content .socials-list {
 }
 
 @media (min-width: 70em) {
-    .container.intro .even-columns {
-        padding-bottom: 10rem;
-    }
-
     .intro-content {
         text-align: left;
     }
@@ -343,6 +337,13 @@ div.intro-content .socials-list {
 
     .intro-picture {
         display: grid;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .intro-picture img {
+        width: 350px;
+        height: 350px;
     }
 
     div.intro-content .socials-list {
