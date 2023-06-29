@@ -336,14 +336,15 @@ div.intro-content .socials-list {
     }
 
     .intro-picture {
+        padding-right: 3.75rem;
         display: grid;
         justify-content: right;
         align-content: center;
     }
 
     .intro-picture img {
-        width: 350px;
-        height: 350px;
+        width: 375px;
+        height: 375px;
     }
 
     div.intro-content .socials-list {
@@ -774,7 +775,7 @@ div.intro-content .socials-list {
 @media (width > 32em) {
     .container {
         --max-width: 90rem;
-        --padding: 2.5rem;
+        --padding: 3rem;
 
         width: min(var(--max-width), 100% - (var(--padding) * 2));
         margin-inline: auto;
