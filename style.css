@@ -511,15 +511,24 @@ div.intro-content .socials-list {
         gap: 1.5rem;
         margin-left: 2rem;
     }
-
     .project-item-container img {
         display: block;
         object-fit: contain;
     }
-
     .projects-text {
         text-align: left;
         padding-top: 1.5rem;
+    }
+    .project-item {
+        transition: 0.5s;
+        padding: 1rem 1rem;
+    }
+    .project-item a {
+        text-decoration: none;
+        color: inherit;
+    }
+    .project-item:hover {
+        box-shadow: 5px 5px 5px var(--clr-neutral-400);
     }
 }
 
@@ -818,6 +827,6 @@ div.intro-content .socials-list {
     }
 
     .list-items li:not(:first-child) {
-        margin-top: 4.5rem;
+        margin-top: 2.5rem;
     }
 }
