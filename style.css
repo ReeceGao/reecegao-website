@@ -297,6 +297,7 @@ label {
 .name {
     line-height: 6rem;
     margin-top: var(--size-500);
+    font-size: 5rem;
 }
 
 .purpose {
@@ -326,6 +327,9 @@ div.intro-content .socials-list {
 }
 
 @media (min-width: 70em) {
+    .name {
+        font-size: 7rem;
+    }
     .intro-content {
         text-align: left;
     }
@@ -424,6 +428,7 @@ div.intro-content .socials-list {
     display: flex;
     justify-content: center;
     gap: 0.75rem;
+    flex-wrap: wrap;
 }
 
 .skills-list span {
@@ -500,9 +505,9 @@ div.intro-content .socials-list {
     display: none;
 }
 
-.project-item-info a {
+.project-item a {
     text-decoration: none;
-    color: var(--clr-accent-400);
+    color: inherit;
 }
 
 @media (min-width: 70em) {
@@ -779,6 +784,7 @@ div.intro-content .socials-list {
 .container {
     padding-inline: 0.5rem;
     padding-block: 2.5rem;
+    margin-inline: 1rem;
 }
 
 @media (width > 32em) {
@@ -809,6 +815,10 @@ div.intro-content .socials-list {
     object-fit: contain;
 }
 
+.list-items {
+    margin-inline: 1rem;
+}
+
 .list-items li {
     text-align: center;
 }
@@ -818,6 +828,10 @@ div.intro-content .socials-list {
 }
 
 @media (min-width: 70em) {
+    .list-items {
+        margin-inline: unset;
+    }
+
     .list-items li {
         text-align: unset;
     }
